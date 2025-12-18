@@ -16,6 +16,8 @@
         <span class="decoration-item">🎁</span>
         <span class="decoration-item">⭐</span>
         <span class="decoration-item">🔔</span>
+        <span class="decoration-item">🍪</span>
+        <span class="decoration-item">☕</span>
     </div>
 </section>
 
@@ -42,6 +44,11 @@
                 <div class="stat-icon">❤️</div>
                 <div class="stat-number">10K+</div>
                 <div class="stat-label">Happy Bakers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">☕</div>
+                <div class="stat-number">@Model.TotalDrinks</div>
+                <div class="stat-label">Festive Drinks</div>
             </div>
         </div>
     </div>
@@ -129,6 +136,68 @@
                 <h3>Don't Overbake</h3>
                 <p>Cookies continue cooking after removal. Take them out when edges are set but centers soft.</p>
             </div>
+            <div class="tip-card">
+                <div class="tip-icon">🍫</div>
+                <h3>Use Quality Ingredients</h3>
+                <p>High-quality chocolate, butter, and spices make a huge difference in flavor.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">🕒</div>
+                <h3>Plan Ahead</h3>
+                <p>Many holiday recipes taste better if made a day or two in advance.</p>
+            </div>
+            <!-- Új tippek -->
+            <div class="tip-card">
+                <div class="tip-icon">🎨</div>
+                <h3>Decorate Creatively</h3>
+                <p>Use colorful icing, sprinkles, and edible decorations to make your treats festive and fun.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">🥄</div>
+                <h3>Test Small Batches</h3>
+                <p>Try a small batch first to adjust flavors and sweetness before making the full recipe.</p>
+            </div>
         </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">💌 What Our Bakers Say</h2>
+        </div>
+        <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; text-align: center;">
+                <p style="font-style: italic; color: #444; line-height: 1.6;">"The gingerbread cookies were a huge hit with my family! Will bake every year!"</p>
+                <span style="display: block; margin-top: 1rem; font-weight: 600; color: var(--christmas-red);">- Anna K.</span>
+            </div>
+            <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; text-align: center;">
+                <p style="font-style: italic; color: #444; line-height: 1.6;">"I tried the peppermint hot cocoa recipe – so delicious and festive!"</p>
+                <span style="display: block; margin-top: 1rem; font-weight: 600; color: var(--christmas-red);">- Mark T.</span>
+            </div>
+            <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; text-align: center;">
+                <p style="font-style: italic; color: #444; line-height: 1.6;">"The Christmas trifle looked stunning on our holiday table, and it tasted even better."</p>
+                <span style="display: block; margin-top: 1rem; font-weight: 600; color: var(--christmas-red);">- Sophie L.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section" style="background: linear-gradient(135deg, var(--christmas-cream) 0%, var(--snow-blue) 100%); padding: 5rem 0;">
+    <div class="container" style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <div class="section-header" style="margin-bottom: 3rem;">
+            <h2 class="section-title" style="font-size: 2.8rem; color: var(--christmas-red); margin-bottom: 1rem;">📬 Stay Updated with Holiday Recipes</h2>
+            <p style="font-size: 1.2rem; color: #555; line-height: 1.6;">Sign up to get festive recipes, tips, and exclusive baking guides straight to your inbox!</p>
+        </div>
+        <form class="newsletter-form" method="post" action="/Subscribe" style="display: flex; gap: 0.8rem; flex-wrap: wrap; justify-content: center;">
+            <input type="email" name="Email" placeholder="Enter your email" required
+                   style="flex: 1 1 250px; padding: 1rem 1.5rem; border-radius: 50px; border: 2px solid var(--christmas-red); font-size: 1rem; outline: none; transition: all 0.3s ease;">
+            <button type="submit" class="btn btn-primary"
+                    style="padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; background: var(--christmas-red); color: white; border: none; cursor: pointer; transition: all 0.3s ease;">
+                Subscribe
+            </button>
+        </form>
     </div>
 </section>

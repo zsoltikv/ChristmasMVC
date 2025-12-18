@@ -858,6 +858,22 @@ section {
     color: #999;
 }
 
+.footer-bottom-fullwidth {
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #FFD700; /* arany szín */
+    font-size: 1rem;
+    font-weight: 500;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+    .footer-bottom-fullwidth p {
+        margin: 0; /* fontos, hogy ne legyen padding/margin ami beljebb tolja */
+    }
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .recipe-header-content {

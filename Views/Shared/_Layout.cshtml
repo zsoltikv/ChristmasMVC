@@ -38,36 +38,64 @@
         @RenderBody()
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <!-- Logo & Description -->
                 <div class="footer-section">
-                    <h3>🎄 Christmas Recipes</h3>
-                    <p>Bringing joy to your holiday baking since 2024</p>
+                    <a href="/" class="footer-logo" style="display:flex; align-items:center; gap:0.8rem; text-decoration:none;">
+                        <span style="font-size:2.5rem;">🎄</span>
+                        <span style="font-size:1.5rem; color: var(--christmas-gold); font-weight:700;">Christmas Recipes</span>
+                    </a>
+                    <p style="margin-top:1rem; color:#ccc; line-height:1.6;">Bringing joy to your holiday baking since 2024. Get festive recipes, tips, and inspiration all season long!</p>
+                    <div style="margin-top:1.5rem; display:flex; gap:1rem;">
+                        <a href="#" style="font-size:1.5rem; color:#fff; transition:color 0.3s;">🐦</a>
+                        <a href="#" style="font-size:1.5rem; color:#fff; transition:color 0.3s;">📘</a>
+                        <a href="#" style="font-size:1.5rem; color:#fff; transition:color 0.3s;">📸</a>
+                    </div>
                 </div>
+
+                <!-- Quick Links -->
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/Recipes">All Recipes</a></li>
-                        <li><a href="/Home/About">About Us</a></li>
+                    <h4 style="color:var(--christmas-gold); margin-bottom:1rem;">Quick Links</h4>
+                    <ul style="list-style:none; padding:0;">
+                        <li><a href="/" style="color:#ccc; text-decoration:none; display:block; margin-bottom:0.5rem;">Home</a></li>
+                        <li><a href="/Recipes" style="color:#ccc; text-decoration:none; display:block; margin-bottom:0.5rem;">All Recipes</a></li>
+                        .footer-bottom-fullwidth {
+                        width: 100%;
+                        margin: 0;
+                        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+                        text-align: center;
+                        padding: 1.5rem 0;
+                        color: #FFD700; /* arany szín */
+                        font-size: 1rem;
+                        font-weight: 500;
+                        border-top: 1px solid rgba(255, 215, 0, 0.2);
+                        }
+
+                        .footer-bottom-fullwidth p {
+                        margin: 0; /* fontos, hogy ne legyen padding/margin ami beljebb tolja */
+                        }
                     </ul>
                 </div>
+
+                <!-- Categories -->
                 <div class="footer-section">
-                    <h4>Categories</h4>
-                    <ul>
-                        <li><a href="/Recipes/Category/1">Cookies</a></li>
-                        <li><a href="/Recipes/Category/2">Desserts</a></li>
-                        <li><a href="/Recipes/Category/3">Drinks</a></li>
+                    <h4 style="color:var(--christmas-gold); margin-bottom:1rem;">Categories</h4>
+                    <ul style="list-style:none; padding:0;">
+                        <li><a href="/Recipes/Category/1" style="color:#ccc; text-decoration:none; display:block; margin-bottom:0.5rem;">Cookies</a></li>
+                        <li><a href="/Recipes/Category/2" style="color:#ccc; text-decoration:none; display:block; margin-bottom:0.5rem;">Desserts</a></li>
+                        <li><a href="/Recipes/Category/3" style="color:#ccc; text-decoration:none; display:block; margin-bottom:0.5rem;">Drinks</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Christmas Recipes. Made with ❤️ for the holidays</p>
             </div>
         </div>
     </footer>
+
+    <!-- Footer Bottom Full Width -->
+    <div class="footer-bottom-fullwidth">
+        <p>&copy; 2024 Christmas Recipes. Made with ❤️ for the holidays</p>
+    </div>
 
     <script src="~/js/site.js"></script>
     <script src="~/js/animations.js"></script>
