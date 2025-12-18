@@ -4,13 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Christmas Recipes</title>
+
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/christmas-theme.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Snowflakes Animation -->
     <div class="snowflakes" aria-hidden="true">
         @for (int i = 0; i < 20; i++)
@@ -19,25 +22,36 @@
         }
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <span class="brand-icon">🎄</span>
-                <span class="brand-text">Christmas Recipes</span>
-            </a>
-            <ul class="navbar-nav">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/Recipes" class="nav-link">All Recipes</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- HEADER + NAVBAR -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a class="nav-logo" asp-controller="Home" asp-action="Index">
+                    🎄 ChristmasMVC
+                </a>
 
-    <!-- Main Content -->
-    <main>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    ☰
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Recipes" asp-action="Index">Recipes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
         @RenderBody()
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
