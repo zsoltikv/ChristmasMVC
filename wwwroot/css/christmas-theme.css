@@ -30,20 +30,20 @@ h1, h2, h3, h4 {
 }
 
 .portion-calculator {
-    background-color: #f28b82; /* enyhe, meleg piros */
-    border: 1px solid #e57373; /* közepes piros keret */
+    background-color: #f28b82; 
+    border: 1px solid #e57373; 
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* enyhe árnyék */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
     margin-bottom: 1rem;
-    color: #ffffff; /* szöveg fehér */
+    color: #ffffff; 
 }
 
 .portion-calculator label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #ffffff; /* címke fehér */
+    color: #ffffff; 
 }
 
 .portion-input-group {
@@ -54,15 +54,15 @@ h1, h2, h3, h4 {
 .portion-input-group input {
     flex: 1;
     padding: 0.5rem;
-    border: 1px solid #ffcdd2; /* világosabb piros keret */
+    border: 1px solid #ffcdd2; 
     border-radius: 6px;
     font-size: 1rem;
-    background-color: #ffe5e0; /* világos, enyhe piros input */
-    color: #b71c1c; /* sötétebb piros szöveg */
+    background-color: #ffe5e0; 
+    color: #b71c1c; 
 }
 
 .portion-input-group button {
-    background-color: #d32f2f; /* közepes piros gomb */
+    background-color: #d32f2f; 
     border: none;
     padding: 0 1rem;
     border-radius: 6px;
@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
 }
 
 .portion-input-group button:hover {
-    background-color: #b71c1c; /* sötétebb piros hover */
+    background-color: #b71c1c;
 }
 
 /* Snowflakes Animation */
@@ -165,7 +165,7 @@ h1, h2, h3, h4 {
 /* Navigation */
 .navbar {
     background: linear-gradient(135deg, var(--christmas-red) 0%, var(--holly-red) 100%);
-    padding: 1.5rem 0;
+    padding: 0.5rem 0;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
