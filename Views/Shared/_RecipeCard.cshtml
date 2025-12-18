@@ -1,0 +1,23 @@
+﻿@model ChristmasRecipes.Models.Recipes
+
+<div class="recipe-card">
+    <div class="recipe-image-wrapper">
+        <img src="@Model.ImageUrl" alt="@Model.Name" class="recipe-image" />
+        <div class="recipe-difficulty">@Model.Difficulty</div>
+    </div>
+    <div class="recipe-card-content">
+        <h3 class="recipe-card-title">@Model.Name</h3>
+        <p class="recipe-card-description">@Model.Description</p>
+        <div class="recipe-meta">
+            <span class="meta-item">
+                <span class="meta-icon">⏱️</span>
+                <span>@(Model.PrepTime + Model.CookTime) min</span>
+            </span>
+            <span class="meta-item">
+                <span class="meta-icon">🍽️</span>
+                <span>@Model.Servings servings</span>
+            </span>
+        </div>
+        <a href="/Recipes/Details/@Model.Id" class="btn btn-recipe">View Recipe</a>
+    </div>
+</div>

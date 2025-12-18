@@ -1,0 +1,134 @@
+﻿@model ChristmasRecipes.Models.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Magical Christmas Recipes</h1>
+        <p class="hero-subtitle">Create unforgettable holiday memories with our festive collection of traditional and modern Christmas recipes</p>
+        <a href="/Recipes" class="btn btn-primary btn-lg">Explore All Recipes</a>
+    </div>
+    <div class="hero-decoration">
+        <span class="decoration-item">🎅</span>
+        <span class="decoration-item">🎁</span>
+        <span class="decoration-item">⭐</span>
+        <span class="decoration-item">🔔</span>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🍪</div>
+                <div class="stat-number">@Model.TotalRecipes</div>
+                <div class="stat-label">Recipes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-number">@Model.Categories.Count</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👨‍🍳</div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Tested</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">❤️</div>
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Happy Bakers</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Recipes -->
+<section class="featured-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">✨ Featured Holiday Treats</h2>
+            <p class="section-subtitle">Our most beloved Christmas recipes to make your holidays special</p>
+        </div>
+        <div class="recipe-grid">
+            @foreach (var recipe in Model.FeaturedRecipes)
+            {
+                <partial name="_RecipeCard" model="recipe" />
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">🎄 Browse by Category</h2>
+            <p class="section-subtitle">Find the perfect recipe for every occasion</p>
+        </div>
+        <div class="categories-grid">
+            @foreach (var category in Model.Categories)
+            {
+                <a href="/Recipes/Category/@category.Id" class="category-card">
+                    <div class="category-icon">@category.Icon</div>
+                    <h3 class="category-name">@category.Name</h3>
+                    <div class="category-arrow">→</div>
+                </a>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Latest Recipes -->
+<section class="latest-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">🆕 Latest Additions</h2>
+            <p class="section-subtitle">Fresh recipes to try this holiday season</p>
+        </div>
+        <div class="recipe-grid">
+            @foreach (var recipe in Model.LatestRecipes)
+            {
+                <partial name="_RecipeCard" model="recipe" />
+            }
+        </div>
+        <div class="text-center mt-5">
+            <a href="/Recipes" class="btn btn-outline">View All Recipes</a>
+        </div>
+    </div>
+</section>
+
+<!-- Tips Section -->
+<section class="tips-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">🎁 Holiday Baking Tips</h2>
+        </div>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-icon">🌡️</div>
+                <h3>Room Temperature</h3>
+                <p>Let butter and eggs reach room temperature for better mixing and texture in your baked goods.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">⚖️</div>
+                <h3>Measure Accurately</h3>
+                <p>Use proper measuring cups and spoons. Level off dry ingredients with a knife for precision.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">❄️</div>
+                <h3>Chill Your Dough</h3>
+                <p>Refrigerate cookie dough before baking for easier handling and better shape retention.</p>
+            </div>
+            <div class="tip-card">
+                <div class="tip-icon">🔥</div>
+                <h3>Don't Overbake</h3>
+                <p>Cookies continue cooking after removal. Take them out when edges are set but centers soft.</p>
+            </div>
+        </div>
+    </div>
+</section>

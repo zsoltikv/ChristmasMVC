@@ -1,0 +1,168 @@
+﻿@model List<ChristmasRecipes.Models.Recipes>
+@{
+    ViewData["Title"] = ViewBag.CategoryName;
+}
+
+<section class="category-hero">
+    <div class="category-hero-overlay"></div>
+    <div class="container">
+        <div class="category-hero-content">
+            <div class="category-hero-icon">@ViewBag.CategoryIcon</div>
+            <h1 class="category-hero-title">@ViewBag.CategoryName</h1>
+            <p class="category-hero-subtitle">Discover our collection of delicious @ViewBag.CategoryName.ToLower()</p>
+            <div class="category-stats">
+                <span class="category-stat">
+                    <span class="stat-number">@Model.Count</span>
+                    <span class="stat-text">Recipes</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="category-content">
+    <div class="container">
+        @if (Model.Any())
+        {
+            <div class="recipe-grid">
+                @foreach (var recipe in Model)
+                {
+                    <partial name="_RecipeCard" model="recipe" />
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <div class="empty-icon">🎄</div>
+                <h2>No Recipes Yet</h2>
+                <p>We're cooking up some amazing recipes for this category. Check back soon!</p>
+                <a href="/Recipes" class="btn btn-primary">Browse All Recipes</a>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="category-tips">
+    <div class="container">
+        <h2 class="section-title">Tips for Making @ViewBag.CategoryName</h2>
+        <div class="tips-grid">
+            @if (ViewBag.CategoryName == "Cookies")
+            {
+                <div class="tip-card">
+                    <div class="tip-icon">❄️</div>
+                    <h3>Chill Your Dough</h3>
+                    <p>Always refrigerate cookie dough for at least 30 minutes before baking. This prevents spreading and gives you perfectly shaped cookies.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🌡️</div>
+                    <h3>Room Temperature Butter</h3>
+                    <p>Let butter soften at room temperature for 30-60 minutes. It should indent easily when pressed but still hold its shape.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⏰</div>
+                    <h3>Don't Overbake</h3>
+                    <p>Remove cookies when edges are set but centers look slightly underdone. They'll continue cooking on the hot pan.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎨</div>
+                    <h3>Decorating Tips</h3>
+                    <p>Let cookies cool completely before decorating. Use royal icing for detailed designs and flooding techniques.</p>
+                </div>
+            }
+            else if (ViewBag.CategoryName == "Desserts")
+            {
+                <div class="tip-card">
+                    <div class="tip-icon">📐</div>
+                    <h3>Measure Precisely</h3>
+                    <p>Baking is chemistry! Use measuring cups for dry ingredients and measuring spoons for small amounts. Level off with a knife.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🥚</div>
+                    <h3>Room Temperature Eggs</h3>
+                    <p>Take eggs out 30 minutes before baking. Room temperature eggs mix better and create lighter, fluffier desserts.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🔥</div>
+                    <h3>Preheat Your Oven</h3>
+                    <p>Always preheat for at least 15 minutes. Use an oven thermometer to ensure accurate temperature.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">✨</div>
+                    <h3>Presentation Matters</h3>
+                    <p>Dust with powdered sugar, add fresh berries, or drizzle with chocolate for that professional bakery look.</p>
+                </div>
+            }
+            else if (ViewBag.CategoryName == "Drinks")
+            {
+                <div class="tip-card">
+                    <div class="tip-icon">🧊</div>
+                    <h3>Quality Ingredients</h3>
+                    <p>Use fresh spices, real vanilla extract, and high-quality chocolate for the best flavor in holiday drinks.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🔥</div>
+                    <h3>Temperature Control</h3>
+                    <p>Heat milk slowly to avoid scorching. Don't let it boil - gentle heat preserves flavor and texture.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎄</div>
+                    <h3>Festive Garnishes</h3>
+                    <p>Top with whipped cream, cinnamon sticks, crushed candy canes, or chocolate shavings for extra holiday cheer.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">☕</div>
+                    <h3>Make It Special</h3>
+                    <p>Serve in festive mugs with homemade marshmallows or flavored syrups for an extra-special touch.</p>
+                </div>
+            }
+            else
+            {
+                <div class="tip-card">
+                    <div class="tip-icon">📝</div>
+                    <h3>Plan Ahead</h3>
+                    <p>Read the entire recipe before starting. Gather all ingredients and equipment to ensure smooth cooking.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🧂</div>
+                    <h3>Taste As You Go</h3>
+                    <p>Season gradually and taste frequently. It's easier to add more seasoning than to fix an over-seasoned dish.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⏱️</div>
+                    <h3>Use a Timer</h3>
+                    <p>Set multiple timers for different components. This helps you stay organized when preparing complex meals.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎁</div>
+                    <h3>Presentation</h3>
+                    <p>Garnish with fresh herbs, pomegranate seeds, or edible flowers for a beautiful holiday presentation.</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="other-categories">
+    <div class="container">
+        <h2 class="section-title">Explore Other Categories</h2>
+        <div class="categories-grid-small">
+            <a href="/Recipes/Category/1" class="mini-category-card @(ViewBag.CategoryName == "Cookies" ? "active" : "")">
+                <span class="mini-icon">🍪</span>
+                <span class="mini-name">Cookies</span>
+            </a>
+            <a href="/Recipes/Category/2" class="mini-category-card @(ViewBag.CategoryName == "Desserts" ? "active" : "")">
+                <span class="mini-icon">🍰</span>
+                <span class="mini-name">Desserts</span>
+            </a>
+            <a href="/Recipes/Category/3" class="mini-category-card @(ViewBag.CategoryName == "Drinks" ? "active" : "")">
+                <span class="mini-icon">☕</span>
+                <span class="mini-name">Drinks</span>
+            </a>
+            <a href="/Recipes/Category/4" class="mini-category-card @(ViewBag.CategoryName == "Main Dishes" ? "active" : "")">
+                <span class="mini-icon">🍗</span>
+                <span class="mini-name">Main Dishes</span>
+            </a>
+        </div>
+    </div>
+</section>

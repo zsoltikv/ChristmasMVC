@@ -1,0 +1,130 @@
+﻿@model ChristmasRecipes.Models.ViewModels.RecipeDetailsViewModel
+@{
+    ViewData["Title"] = Model.Recipe.Name;
+    var recipe = Model.Recipe;
+}
+
+<article class="recipe-details">
+    <!-- Recipe Header -->
+    <section class="recipe-header">
+        <div class="container">
+            <div class="recipe-header-content">
+                <div class="recipe-header-text">
+                    <div class="recipe-category-badge">@recipe.Category?.Name</div>
+                    <h1 class="recipe-title">@recipe.Name</h1>
+                    <p class="recipe-description">@recipe.Description</p>
+                    <div class="recipe-meta-large">
+                        <div class="meta-item-large">
+                            <div class="meta-icon-large">⏰</div>
+                            <div class="meta-text">
+                                <div class="meta-label">Prep Time</div>
+                                <div class="meta-value">@recipe.PrepTime min</div>
+                            </div>
+                        </div>
+                        <div class="meta-item-large">
+                            <div class="meta-icon-large">🔥</div>
+                            <div class="meta-text">
+                                <div class="meta-label">Cook Time</div>
+                                <div class="meta-value">@recipe.CookTime min</div>
+                            </div>
+                        </div>
+                        <div class="meta-item-large">
+                            <div class="meta-icon-large">🍽️</div>
+                            <div class="meta-text">
+                                <div class="meta-label">Servings</div>
+                                <div class="meta-value">@recipe.Servings</div>
+                            </div>
+                        </div>
+                        <div class="meta-item-large">
+                            <div class="meta-icon-large">⭐</div>
+                            <div class="meta-text">
+                                <div class="meta-label">Difficulty</div>
+                                <div class="meta-value">@recipe.Difficulty</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recipe-header-image">
+                    <img src="@recipe.ImageUrl" alt="@recipe.Name" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Content -->
+    <section class="recipe-content">
+        <div class="container">
+            <div class="recipe-content-grid">
+                <!-- Ingredients -->
+                <div class="recipe-ingredients">
+                    <div class="content-card">
+                        <h2 class="content-title">
+                            <span class="title-icon">🛒</span>
+                            Ingredients
+                        </h2>
+                        <ul class="ingredients-list">
+                            @foreach (var ingredient in recipe.Ingredients)
+                            {
+                                <li class="ingredient-item">
+                                    <span class="ingredient-amount">@ingredient.Amount</span>
+                                    <span class="ingredient-name">@ingredient.Name</span>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                    @if (recipe.Tips != null && recipe.Tips.Any())
+                    {
+                        <div class="content-card tips-card">
+                            <h2 class="content-title">
+                                <span class="title-icon">💡</span>
+                                Pro Tips
+                            </h2>
+                            <ul class="tips-list">
+                                @foreach (var tip in recipe.Tips)
+                                {
+                                    <li class="tip-item">@tip</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+
+                <!-- Instructions -->
+                <div class="recipe-instructions">
+                    <div class="content-card">
+                        <h2 class="content-title">
+                            <span class="title-icon">👨‍🍳</span>
+                            Instructions
+                        </h2>
+                        <ol class="instructions-list">
+                            @for (int i = 0; i < recipe.Instructions.Count; i++)
+                            {
+                                <li class="instruction-item">
+                                    <span class="instruction-number">@(i + 1)</span>
+                                    <span class="instruction-text">@recipe.Instructions[i]</span>
+                                </li>
+                            }
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Recipes -->
+    @if (Model.RelatedRecipes != null && Model.RelatedRecipes.Any())
+    {
+        <section class="related-recipes">
+            <div class="container">
+                <h2 class="section-title">You Might Also Like</h2>
+                <div class="recipe-grid">
+                    @foreach (var relatedRecipe in Model.RelatedRecipes)
+                    {
+                        <partial name="_RecipeCard" model="relatedRecipe" />
+                    }
+                </div>
+            </div>
+        </section>
+    }
+</article>

@@ -1,0 +1,22 @@
+﻿@model List<ChristmasRecipes.Models.Recipes>
+@{
+    ViewData["Title"] = "All Recipes";
+}
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">🍪 All Christmas Recipes</h1>
+        <p class="page-subtitle">Discover our complete collection of festive treats</p>
+    </div>
+</section>
+
+<section class="recipes-page">
+    <div class="container">
+        <div class="recipe-grid">
+            @foreach (var recipe in Model)
+            {
+                <partial name="_RecipeCard" model="recipe" />
+            }
+        </div>
+    </div>
+</section>
