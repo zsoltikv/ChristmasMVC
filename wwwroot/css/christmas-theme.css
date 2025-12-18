@@ -330,6 +330,7 @@ h1, h2, h3, h4 {
     color: white;
     width: 100%;
     padding: 0.8rem;
+    margin-top: auto;
 }
 
     .btn-recipe:hover {
@@ -408,7 +409,6 @@ section {
     gap: 2.5rem;
 }
 
-/* Recipe Card */
 .recipe-card {
     background: white;
     border-radius: 25px;
@@ -416,6 +416,8 @@ section {
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     transition: all 0.4s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
     .recipe-card:hover {
@@ -454,6 +456,9 @@ section {
 
 .recipe-card-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .recipe-card-title {

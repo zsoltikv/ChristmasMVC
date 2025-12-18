@@ -203,6 +203,79 @@ namespace ChristmasMVC.Data
                         "Store in airtight container for up to 2 weeks"
                     }
                 },
+                new Recipes
+                {
+                    Id = 17,
+                    Name = "Peanut Butter Blossoms",
+                    Description = "Soft peanut butter cookies topped with a chocolate kiss in the center.",
+                    PrepTime = 15,
+                    CookTime = 10,
+                    Servings = 24,
+                    Difficulty = "Easy",
+                    ImageUrl = "/images/peanut_butter_blossoms.jpg",
+                    CategoryId = 1,
+                    CreatedDate = DateTime.Now.AddDays(-3),
+                    Ingredients = new List<Ingredient>
+                    {
+                        new Ingredient { Name = "Peanut butter", Amount = "1 cup" },
+                        new Ingredient { Name = "Sugar", Amount = "1 cup" },
+                        new Ingredient { Name = "Egg", Amount = "1" },
+                        new Ingredient { Name = "Flour", Amount = "1½ cups" },
+                        new Ingredient { Name = "Baking soda", Amount = "1 tsp" },
+                        new Ingredient { Name = "Chocolate kisses", Amount = "24" }
+                    },
+                    Instructions = new List<string>
+                    {
+                        "Preheat oven to 375°F (190°C).",
+                        "Mix peanut butter, sugar, and egg until smooth.",
+                        "Combine flour and baking soda, then add to peanut butter mixture.",
+                        "Roll dough into 1-inch balls and place on baking sheet.",
+                        "Bake 8-10 minutes, then press chocolate kiss into center immediately.",
+                        "Cool before serving."
+                    },
+                    Tips = new List<string>
+                    {
+                        "Do not overbake - cookies should stay soft",
+                        "Press chocolate kiss while cookies are still warm"
+                    }
+                },
+                new Recipes
+                {
+                    Id = 18,
+                    Name = "Snickerdoodles",
+                    Description = "Soft and chewy cinnamon-sugar cookies with a slightly tangy flavor.",
+                    PrepTime = 20,
+                    CookTime = 12,
+                    Servings = 24,
+                    Difficulty = "Easy",
+                    ImageUrl = "/images/snickerdoodles.jpg",
+                    CategoryId = 1,
+                    CreatedDate = DateTime.Now.AddDays(-2),
+                    Ingredients = new List<Ingredient>
+                    {
+                        new Ingredient { Name = "Flour", Amount = "2¾ cups" },
+                        new Ingredient { Name = "Sugar", Amount = "1½ cups" },
+                        new Ingredient { Name = "Butter", Amount = "1 cup" },
+                        new Ingredient { Name = "Eggs", Amount = "2" },
+                        new Ingredient { Name = "Cream of tartar", Amount = "2 tsp" },
+                        new Ingredient { Name = "Baking soda", Amount = "1 tsp" },
+                        new Ingredient { Name = "Cinnamon", Amount = "2 tsp" },
+                        new Ingredient { Name = "Salt", Amount = "¼ tsp" }
+                    },
+                    Instructions = new List<string>
+                    {
+                        "Preheat oven to 375°F (190°C).",
+                        "Cream butter and sugar, then add eggs.",
+                        "Combine flour, cream of tartar, baking soda, and salt; add to wet mixture.",
+                        "Roll dough into balls, then coat in cinnamon-sugar mixture.",
+                        "Bake 8-10 minutes, let cool on wire rack."
+                    },
+                    Tips = new List<string>
+                    {
+                        "Use fresh cinnamon for best flavor",
+                        "Do not flatten dough before baking"
+                    }
+                },
                 
                 // DESSERTS
                 new Recipes
@@ -394,6 +467,76 @@ namespace ChristmasMVC.Data
                         "Can be frozen for up to 6 months"
                     }
                 },
+                new Recipes
+                {
+                    Id = 19,
+                    Name = "Yule Log Cake (Bûche de Noël)",
+                    Description = "Chocolate sponge cake rolled with cream filling, decorated like a log.",
+                    PrepTime = 45,
+                    CookTime = 15,
+                    Servings = 12,
+                    Difficulty = "Medium",
+                    ImageUrl = "/images/yule_log_cake.jpg",
+                    CategoryId = 2,
+                    CreatedDate = DateTime.Now.AddDays(-5),
+                    Ingredients = new List<Ingredient>
+                    {
+                        new Ingredient { Name = "Eggs", Amount = "4" },
+                        new Ingredient { Name = "Sugar", Amount = "¾ cup" },
+                        new Ingredient { Name = "Flour", Amount = "½ cup" },
+                        new Ingredient { Name = "Cocoa powder", Amount = "¼ cup" },
+                        new Ingredient { Name = "Heavy cream", Amount = "1 cup" },
+                        new Ingredient { Name = "Powdered sugar", Amount = "2 tbsp" },
+                        new Ingredient { Name = "Chocolate ganache", Amount = "1 cup" }
+                    },
+                    Instructions = new List<string>
+                    {
+                        "Preheat oven to 350°F (175°C) and line a jelly roll pan with parchment.",
+                        "Beat eggs and sugar until thick and pale.",
+                        "Fold in flour and cocoa gently.",
+                        "Spread batter evenly and bake 12-15 minutes.",
+                        "Roll cake with a towel while warm, then unroll and fill with cream.",
+                        "Roll again, cover with ganache, decorate, and chill."
+                    },
+                    Tips = new List<string>
+                    {
+                        "Be gentle folding flour to keep cake airy",
+                        "Use a damp towel to roll the cake for easy shaping"
+                    }
+                },
+                new Recipes
+                {
+                    Id = 20,
+                    Name = "Christmas Trifle",
+                    Description = "Layers of sponge cake, custard, fruit, and whipped cream in a festive glass.",
+                    PrepTime = 20,
+                    CookTime = 0,
+                    Servings = 8,
+                    Difficulty = "Easy",
+                    ImageUrl = "/images/christmas_trifle.jpg",
+                    CategoryId = 2,
+                    CreatedDate = DateTime.Now.AddDays(-1),
+                    Ingredients = new List<Ingredient>
+                    {
+                        new Ingredient { Name = "Sponge cake cubes", Amount = "4 cups" },
+                        new Ingredient { Name = "Custard", Amount = "2 cups" },
+                        new Ingredient { Name = "Mixed berries", Amount = "2 cups" },
+                        new Ingredient { Name = "Sherry or juice", Amount = "¼ cup" },
+                        new Ingredient { Name = "Whipped cream", Amount = "2 cups" }
+                    },
+                    Instructions = new List<string>
+                    {
+                        "Layer sponge cake in a trifle dish and drizzle with sherry.",
+                        "Add a layer of custard, then berries, then whipped cream.",
+                        "Repeat layers and finish with whipped cream and berries on top.",
+                        "Chill for at least 2 hours before serving."
+                    },
+                    Tips = new List<string>
+                    {
+                        "Make a day ahead for best flavor",
+                        "Use fresh seasonal fruits for color and taste"
+                    }
+                },
                 
                 // DRINKS
                 new Recipes
@@ -575,8 +718,143 @@ namespace ChristmasMVC.Data
                         "Can be made dairy-free with plant milk"
                     }
                 },
+                new Recipes
+                {
+                    Id = 21,
+                    Name = "Cinnamon Apple Cider",
+                    Description = "Warm apple cider infused with cinnamon sticks and cloves.",
+                    PrepTime = 5,
+                    CookTime = 15,
+                    Servings = 6,
+                    Difficulty = "Easy",
+                    ImageUrl = "/images/cinnamon_apple_cider.jpg",
+                    CategoryId = 3,
+                    CreatedDate = DateTime.Now.AddDays(-2),
+                    Ingredients = new List<Ingredient>
+                    {
+                        new Ingredient { Name = "Apple cider", Amount = "6 cups" },
+                        new Ingredient { Name = "Cinnamon sticks", Amount = "3" },
+                        new Ingredient { Name = "Whole cloves", Amount = "8" },
+                        new Ingredient { Name = "Orange slices", Amount = "1" }
+                    },
+                    Instructions = new List<string>
+                    {
+                        "Pour cider into saucepan, add cinnamon, cloves, and orange slices.",
+                        "Simmer over low heat for 10-15 minutes.",
+                        "Strain and serve warm."
+                    },
+                    Tips = new List<string>
+                    {
+                        "Do not boil to preserve flavor",
+                        "Can add a splash of brandy for adults"
+                    }
+                },
+                new Recipes
+                {
+                    Id = 22,
+                    Name = "Hot Buttered Rum",
+                    Description = "Classic holiday cocktail with butter, sugar, and rum in hot water.",
+                    PrepTime = 5,
+                    CookTime = 5,
+                    Servings = 4,
+                    Difficulty = "Medium",
+                    ImageUrl = "/images/hot_buttered_rum.jpg",
+                    CategoryId = 3,
+                    CreatedDate = DateTime.Now.AddDays(-1),
+                    Ingredients = new List<Ingredient>
+                    {
+                        new Ingredient { Name = "Unsalted butter", Amount = "4 tbsp" },
+                        new Ingredient { Name = "Brown sugar", Amount = "¼ cup" },
+                        new Ingredient { Name = "Ground cinnamon", Amount = "½ tsp" },
+                        new Ingredient { Name = "Ground nutmeg", Amount = "¼ tsp" },
+                        new Ingredient { Name = "Dark rum", Amount = "½ cup" },
+                        new Ingredient { Name = "Boiling water", Amount = "4 cups" }
+                    },
+                    Instructions = new List<string>
+                    {
+                        "Mix butter, sugar, cinnamon, and nutmeg to make a paste.",
+                        "Divide paste into mugs, add rum and top with boiling water.",
+                        "Stir until butter melts and serve hot."
+                    },
+                    Tips = new List<string>
+                    {
+                        "Use unsalted butter for best control of sweetness",
+                        "Adjust sugar to taste"
+                    }
+                },
                 
                 // MAIN DISHES
+                new Recipes
+                {
+                    Id = 23,
+                    Name = "Stuffed Pork Loin",
+                    Description = "Juicy pork loin stuffed with spinach, apples, and herbs.",
+                    PrepTime = 25,
+                    CookTime = 90,
+                    Servings = 8,
+                    Difficulty = "Medium",
+                    ImageUrl = "/images/stuffed_pork_loin.jpg",
+                    CategoryId = 4,
+                    CreatedDate = DateTime.Now.AddDays(-6),
+                    Ingredients = new List<Ingredient>
+                    {
+                        new Ingredient { Name = "Pork loin", Amount = "4 lbs" },
+                        new Ingredient { Name = "Spinach", Amount = "2 cups" },
+                        new Ingredient { Name = "Apples, sliced", Amount = "2" },
+                        new Ingredient { Name = "Garlic, minced", Amount = "3 cloves" },
+                        new Ingredient { Name = "Olive oil", Amount = "2 tbsp" },
+                        new Ingredient { Name = "Salt and pepper", Amount = "to taste" }
+                    },
+                    Instructions = new List<string>
+                    {
+                        "Preheat oven to 375°F (190°C).",
+                        "Butterfly pork loin and season with salt and pepper.",
+                        "Sauté spinach, garlic, and apples, then stuff into pork loin.",
+                        "Tie with kitchen twine, brush with olive oil, and roast 1½ hours.",
+                        "Let rest 10 minutes before slicing."
+                    },
+                    Tips = new List<string>
+                    {
+                        "Tie tightly to keep stuffing inside",
+                        "Use meat thermometer to ensure pork is cooked to 145°F"
+                    }
+                },
+                new Recipes
+                {
+                    Id = 24,
+                    Name = "Baked Salmon with Herb Crust",
+                    Description = "Tender salmon fillets topped with a crunchy herb and breadcrumb crust.",
+                    PrepTime = 15,
+                    CookTime = 25,
+                    Servings = 6,
+                    Difficulty = "Medium",
+                    ImageUrl = "/images/herb_crusted_salmon.jpeg",
+                    CategoryId = 4,
+                    CreatedDate = DateTime.Now.AddDays(-4),
+                    Ingredients = new List<Ingredient>
+                    {
+                        new Ingredient { Name = "Salmon fillets", Amount = "6" },
+                        new Ingredient { Name = "Breadcrumbs", Amount = "1 cup" },
+                        new Ingredient { Name = "Parmesan, grated", Amount = "½ cup" },
+                        new Ingredient { Name = "Parsley, chopped", Amount = "2 tbsp" },
+                        new Ingredient { Name = "Lemon zest", Amount = "1 tsp" },
+                        new Ingredient { Name = "Olive oil", Amount = "2 tbsp" },
+                        new Ingredient { Name = "Salt and pepper", Amount = "to taste" }
+                    },
+                    Instructions = new List<string>
+                    {
+                        "Preheat oven to 400°F (200°C).",
+                        "Mix breadcrumbs, Parmesan, parsley, lemon zest, salt, and pepper with olive oil.",
+                        "Place salmon on baking sheet and press herb mixture on top.",
+                        "Bake 20-25 minutes until salmon is cooked through.",
+                        "Serve immediately."
+                    },
+                    Tips = new List<string>
+                    {
+                        "Do not overbake to keep salmon moist",
+                        "Can add crushed garlic to herb mix for extra flavor"
+                    }
+                },
                 new Recipes
                 {
                     Id = 13,
