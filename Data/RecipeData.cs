@@ -30,7 +30,7 @@ namespace ChristmasMVC.Data
                     CookTime = 15,
                     Servings = 24,
                     Difficulty = "Easy",
-                    ImageUrl = "/images/gingerbread-cookies.jpg",
+                    ImageUrl = "/images/christmas_gingerbreadman.jpg",
                     CategoryId = 1,
                     CreatedDate = DateTime.Now.AddDays(-10),
                     Ingredients = new List<Ingredient>
@@ -79,7 +79,7 @@ namespace ChristmasMVC.Data
                     CookTime = 10,
                     Servings = 36,
                     Difficulty = "Easy",
-                    ImageUrl = "/images/sugar-cookies.jpg",
+                    ImageUrl = "/images/snowflake.jpg",
                     CategoryId = 1,
                     CreatedDate = DateTime.Now.AddDays(-8),
                     Ingredients = new List<Ingredient>
@@ -123,7 +123,7 @@ namespace ChristmasMVC.Data
                     CookTime = 12,
                     Servings = 24,
                     Difficulty = "Easy",
-                    ImageUrl = "/images/chocolate-crinkle.jpg",
+                    ImageUrl = "/images/christmas_cookies.jpg",
                     CategoryId = 1,
                     CreatedDate = DateTime.Now.AddDays(-5),
                     Ingredients = new List<Ingredient>
@@ -169,7 +169,7 @@ namespace ChristmasMVC.Data
                     CookTime = 25,
                     Servings = 16,
                     Difficulty = "Easy",
-                    ImageUrl = "/images/shortbread.jpg",
+                    ImageUrl = "/images/shortbread_cookies.jpg",
                     CategoryId = 1,
                     CreatedDate = DateTime.Now.AddDays(-4),
                     Ingredients = new List<Ingredient>
@@ -214,7 +214,7 @@ namespace ChristmasMVC.Data
                     CookTime = 5,
                     Servings = 16,
                     Difficulty = "Easy",
-                    ImageUrl = "/images/peppermint-bark.jpg",
+                    ImageUrl = "/images/peppermint_bark.jpg",
                     CategoryId = 2,
                     CreatedDate = DateTime.Now.AddDays(-6),
                     Ingredients = new List<Ingredient>
@@ -253,7 +253,7 @@ namespace ChristmasMVC.Data
                     CookTime = 240,
                     Servings = 10,
                     Difficulty = "Hard",
-                    ImageUrl = "/images/christmas-pudding.jpg",
+                    ImageUrl = "/images/pudding.jpg",
                     CategoryId = 2,
                     CreatedDate = DateTime.Now.AddDays(-15),
                     Ingredients = new List<Ingredient>
@@ -304,7 +304,7 @@ namespace ChristmasMVC.Data
                     CookTime = 70,
                     Servings = 12,
                     Difficulty = "Medium",
-                    ImageUrl = "/images/eggnog-cheesecake.jpg",
+                    ImageUrl = "/images/cheesecake.jpg",
                     CategoryId = 2,
                     CreatedDate = DateTime.Now.AddDays(-7),
                     Ingredients = new List<Ingredient>
@@ -405,7 +405,7 @@ namespace ChristmasMVC.Data
                     CookTime = 10,
                     Servings = 4,
                     Difficulty = "Easy",
-                    ImageUrl = "/images/hot-chocolate.jpg",
+                    ImageUrl = "/images/hot_chocolate.jpg",
                     CategoryId = 3,
                     CreatedDate = DateTime.Now.AddDays(-3),
                     Ingredients = new List<Ingredient>
@@ -448,7 +448,7 @@ namespace ChristmasMVC.Data
                     CookTime = 20,
                     Servings = 8,
                     Difficulty = "Easy",
-                    ImageUrl = "/images/mulled-wine.jpg",
+                    ImageUrl = "/images/mulled_wine.jpg",
                     CategoryId = 3,
                     CreatedDate = DateTime.Now.AddDays(-4),
                     Ingredients = new List<Ingredient>
@@ -493,7 +493,7 @@ namespace ChristmasMVC.Data
                     CookTime = 10,
                     Servings = 8,
                     Difficulty = "Medium",
-                    ImageUrl = "/images/eggnog.jpg",
+                    ImageUrl = "/images/homemade_eggnog.jpg",
                     CategoryId = 3,
                     CreatedDate = DateTime.Now.AddDays(-6),
                     Ingredients = new List<Ingredient>
@@ -540,7 +540,7 @@ namespace ChristmasMVC.Data
                     CookTime = 10,
                     Servings = 4,
                     Difficulty = "Easy",
-                    ImageUrl = "/images/peppermint-cocoa.jpg",
+                    ImageUrl = "/images/peppermint_cocoa.jpg",
                     CategoryId = 3,
                     CreatedDate = DateTime.Now.AddDays(-2),
                     Ingredients = new List<Ingredient>
@@ -586,7 +586,7 @@ namespace ChristmasMVC.Data
                     CookTime = 240,
                     Servings = 12,
                     Difficulty = "Hard",
-                    ImageUrl = "/images/roasted-turkey.jpg",
+                    ImageUrl = "/images/roasted_turkey.jpg",
                     CategoryId = 4,
                     CreatedDate = DateTime.Now.AddDays(-12),
                     Ingredients = new List<Ingredient>
@@ -637,7 +637,7 @@ namespace ChristmasMVC.Data
                     CookTime = 150,
                     Servings = 10,
                     Difficulty = "Medium",
-                    ImageUrl = "/images/honey-ham.jpg",
+                    ImageUrl = "/images/honey_glazed_ham.jpg",
                     CategoryId = 4,
                     CreatedDate = DateTime.Now.AddDays(-9),
                     Ingredients = new List<Ingredient>
@@ -683,7 +683,7 @@ namespace ChristmasMVC.Data
                     CookTime = 180,
                     Servings = 8,
                     Difficulty = "Hard",
-                    ImageUrl = "/images/prime-rib.jpg",
+                    ImageUrl = "/images/prime_rib_roast.jpg",
                     CategoryId = 4,
                     CreatedDate = DateTime.Now.AddDays(-11),
                     Ingredients = new List<Ingredient>
@@ -731,7 +731,7 @@ namespace ChristmasMVC.Data
                     CookTime = 40,
                     Servings = 6,
                     Difficulty = "Hard",
-                    ImageUrl = "/images/beef-wellington.jpg",
+                    ImageUrl = "/images/beef_wellington.jpg",
                     CategoryId = 4,
                     CreatedDate = DateTime.Now.AddDays(-14),
                     Ingredients = new List<Ingredient>
