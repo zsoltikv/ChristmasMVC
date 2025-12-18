@@ -16,6 +16,19 @@ namespace ChristmasMVC.Data
             };
         }
 
+        public static List<Recipes> SearchByName(string searchTerm)
+        {
+            var recipes = GetRecipes();
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                return recipes;
+            }
+
+            return recipes
+                .Where(r => r.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
+
         public static List<Recipes> GetRecipes()
         {
             return new List<Recipes>

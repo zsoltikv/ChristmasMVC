@@ -7,11 +7,12 @@ namespace ChristmasRecipes.Controllers
 {
     public class RecipesController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string? search)
         {
-            var recipes = RecipeData.GetRecipes();
+            var recipes = RecipeData.SearchByName(search);
             return View(recipes);
         }
+        
 
         public IActionResult Details(int id)
         {

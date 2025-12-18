@@ -13,3 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("searchInput");
+    const items = document.querySelectorAll(".recipe-item");
+
+    if (!input) return;
+
+    input.addEventListener("input", () => {
+        const value = input.value.toLowerCase();
+
+        items.forEach(item => {
+            const text = item.innerText.toLowerCase();
+
+            if (text.includes(value)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+});
