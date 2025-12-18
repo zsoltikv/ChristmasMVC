@@ -54,14 +54,22 @@
     <!-- Recipe Content -->
     <section class="recipe-content">
         <div class="container">
-            <div class="recipe-content-grid">
-                <!-- Ingredients -->
+            <div class="recipe-content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                 <div class="recipe-ingredients">
                     <div class="content-card">
                         <h2 class="content-title">
                             <span class="title-icon">🛒</span>
                             Ingredients
                         </h2>
+
+                        <div class="portion-calculator">
+                            <label for="desiredPortion">Number of servings:</label>
+                            <div class="portion-input-group">
+                                <input type="number" id="desiredPortion" value="@recipe.Servings" min="1" step="1" data-original="@recipe.Servings">
+                                <button id="calculatePortion">Calculate</button>
+                            </div>
+                        </div>
+
                         <ul class="ingredients-list">
                             @foreach (var ingredient in recipe.Ingredients)
                             {
@@ -90,7 +98,7 @@
                     }
                 </div>
 
-                <!-- Instructions -->
+                <!-- Jobb oldal: Instructions -->
                 <div class="recipe-instructions">
                     <div class="content-card">
                         <h2 class="content-title">
@@ -111,20 +119,8 @@
             </div>
         </div>
     </section>
-
-    <!-- Related Recipes -->
-    @if (Model.RelatedRecipes != null && Model.RelatedRecipes.Any())
-    {
-        <section class="related-recipes">
-            <div class="container">
-                <h2 class="section-title">You Might Also Like</h2>
-                <div class="recipe-grid">
-                    @foreach (var relatedRecipe in Model.RelatedRecipes)
-                    {
-                        <partial name="_RecipeCard" model="relatedRecipe" />
-                    }
-                </div>
-            </div>
-        </section>
     }
+
 </article>
+
+<script src="~/js/portionCalculator.js"></script>
